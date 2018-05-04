@@ -12,7 +12,7 @@ ENV GDAL_DAILY_URL http://www.gdal.org/daily/
 ENV ROOTDIR /usr/local/src/python-gdal
 
 # Copy the application folder inside the container
-ADD . /usr/local/src/docker-python-gdal
+ADD . ${ROOTDIR}
 
 # Compile and install Python
 RUN ${ROOTDIR}/scripts/install-python.sh
