@@ -1,5 +1,4 @@
-# :whale: python-gdal [![Build Status](https://travis-ci.org/andrejreznik/docker-python-gdal.svg?branch=master)](https://travis-ci.org/andrejreznik/docker-python-gdal)
-
+# :whale: python-gdal [![CircleCI](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master.svg?style=shield)](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master)
 #### Python + GDAL/OGR Docker image
 
 Get and compile latest CPython and GDAL sources from their official repositories.

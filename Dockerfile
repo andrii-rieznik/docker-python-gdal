@@ -19,4 +19,4 @@ RUN ${ROOTDIR}/install-python.sh
 ADD ./scripts/install-gdal.sh ${ROOTDIR}/
 RUN ${ROOTDIR}/install-gdal.sh
 
-CMD python3 -V && pip3 -V && gdalinfo --version
+CMD python3 -V && pip -V && gdalinfo --version
