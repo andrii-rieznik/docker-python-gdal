@@ -24,15 +24,15 @@ GDAL_DAILY_FL=$(wget -O - ${GDAL_DAILY_URL} \
     | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' \
     | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' \
     | grep -e 'gdal-svn-trunk-[0-9]*.[0-9]*.[0-9]*.tar.gz$') \
-    && cd src \
+    && cd ${ROOTDIR} \
     && wget ${GDAL_DAILY_URL}${GDAL_DAILY_FL} \
     && tar -xvf ${GDAL_DAILY_FL} \
     && cd ${GDAL_DAILY_FL%.tar.gz} \
     && ./configure --with-python --with-curl --with-openjpeg \
-    && make && make install && ldconfig \
-    && cd ${ROOTDIR}/src/${GDAL_DAILY_FL%.tar.gz}/swig/python \
+    && make -j$(nproc) && make install && ldconfig \
+    && cd ${ROOTDIR}/${GDAL_DAILY_FL%.tar.gz}/swig/python \
     && python3 setup.py build && python3 setup.py install \
-    && rm -rf ${ROOTDIR}/src/* \
+    && rm -rf ${ROOTDIR} \
     && apt-get update -y \
     && apt-get remove -y --purge build-essential wget \
     && rm -rf /var/lib/apt/lists/*
