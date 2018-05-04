@@ -1,4 +1,4 @@
-#  python-gdal [![Build Status](https://travis-ci.org/andrejreznik/docker-python-gdal.svg?branch=master)](https://travis-ci.org/andrejreznik/docker-python-gdal)
+# :whale: python-gdal [![Build Status](https://travis-ci.org/andrejreznik/docker-python-gdal.svg?branch=master)](https://travis-ci.org/andrejreznik/docker-python-gdal)
 
 #### Python + GDAL/OGR Docker image
 
