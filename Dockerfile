@@ -11,11 +11,12 @@ ENV GDAL_DAILY_URL http://www.gdal.org/daily/
 
 ENV ROOTDIR /usr/local/src/python-gdal
 
-# Copy the application folder inside the container
-ADD . ${ROOTDIR}
-
 # Compile and install Python
-RUN ${ROOTDIR}/scripts/install-python.sh
-RUN ${ROOTDIR}/scripts/install-gdal.sh
+ADD ./scripts/install-python.sh ${ROOTDIR}/
+RUN ${ROOTDIR}/install-python.sh
+
+# Compile and install GDAL
+ADD ./scripts/install-gdal.sh ${ROOTDIR}/
+RUN ${ROOTDIR}/install-gdal.sh
 
 CMD python3 -V && pip3 -V && gdalinfo --version
