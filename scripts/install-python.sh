@@ -32,3 +32,11 @@ cd "Python-${PYTHON_VERSION}"
 make -j"$(nproc)"
 make install
 ldconfig
+
+# Install latest pip via get-pip.py
+wget -O get-pip.py 'https://bootstrap.pypa.io/get-pip.py'
+
+python3 get-pip.py \
+		--disable-pip-version-check \
+		--no-cache-dir \
+        "pip==${PYTHON_PIP_VERSION}"
