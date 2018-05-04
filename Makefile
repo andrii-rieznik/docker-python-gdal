@@ -1,7 +1,7 @@
 IMAGE := andrejreznik/python-gdal
 
 test:
-	true
+	docker run $(IMAGE)
 
 image:
 	docker build -t $(IMAGE) .
