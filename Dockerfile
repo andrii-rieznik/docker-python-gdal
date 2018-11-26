@@ -1,13 +1,14 @@
 ##
 # andrejreznik/python-gdal
 #
-# Debian 9.4 Stretch
+# Debian 9.6 Stretch
 FROM debian:latest
 MAINTAINER Andrey Reznik <andrey.reznik.ce@gmail.com>
 
-ENV PYTHON_VERSION 3.6.5
-ENV PYTHON_PIP_VERSION 10.0.1
-ENV GDAL_DAILY_URL http://www.gdal.org/daily/
+# Latest stable varions
+ENV PYTHON_VERSION 3.7.1
+ENV PYTHON_PIP_VERSION 18.1
+ENV GDAL_VERSION 2.3.2
 
 ENV ROOTDIR /usr/local/src/python-gdal
 

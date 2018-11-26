@@ -19,7 +19,7 @@ apt-get update && apt-get install -y --no-install-recommends \
 # Download and unpack the downloaded archive
 cd "${ROOTDIR}"
 wget "https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz"
-tar -xvzf Python-3.6.5.tgz
+tar -xvzf "Python-${PYTHON_VERSION}.tgz"
 
 
 # Install Python from source

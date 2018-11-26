@@ -21,17 +21,13 @@ apt-get update -y \
 
 
 # Get latest GDAL source
-GDAL_DAILY_FL=$(wget -O - "${GDAL_DAILY_URL}" \
-    | grep -o '<a href=['"'"'"][^"'"'"']*['"'"'"]' \
-    | sed -e 's/^<a href=["'"'"']//' -e 's/["'"'"']$//' \
-    | grep -e 'gdal-svn-trunk-[0-9]*.[0-9]*.[0-9]*.tar.gz$')
 cd "${ROOTDIR}"
-wget "${GDAL_DAILY_URL}${GDAL_DAILY_FL}"
-tar -xvf "${GDAL_DAILY_FL}"
+wget "http://download.osgeo.org/gdal/${GDAL_VERSION}/gdal-${GDAL_VERSION}.tar.gz"
+tar -xvf "gdal-${GDAL_VERSION}.tar.gz"
 
 
 # Compile and install GDAL
-cd "${GDAL_DAILY_FL%.tar.gz}"
+cd "gdal-${GDAL_VERSION}"
 ./configure \
     --with-python \
     --with-curl \
@@ -43,7 +39,7 @@ ldconfig
 
 
 # Install Python bindings
-cd "${ROOTDIR}/${GDAL_DAILY_FL%.tar.gz}/swig/python"
+cd "${ROOTDIR}/gdal-${GDAL_VERSION}/swig/python"
 python3 setup.py build
 python3 setup.py install
 cd /usr/local
