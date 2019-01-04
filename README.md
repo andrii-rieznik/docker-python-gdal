@@ -10,9 +10,9 @@ Output versions of Python, pip and GDAL
 ```bash
 $ docker run andrejreznik/python-gdal
 
-Python 3.7.1
+Python 3.7.2
 pip 18.1 from /usr/local/lib/python3.7/site-packages/pip (python 3.7)
-GDAL 2.3.2, released 2018/09/21
+GDAL 2.4.0, released 2018/12/14
 ```
 
 Run container and start an interactive bash session as root 
