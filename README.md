@@ -1,4 +1,6 @@
-# :whale: python-gdal [![CircleCI](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master.svg?style=shield)](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master)
+# :whale: python-gdal
+[![CircleCI](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master.svg?style=shield)](https://circleci.com/gh/andrejreznik/docker-python-gdal/tree/master)![](https://images.microbadger.com/badges/image/andrejreznik/python-gdal.svg)![](https://img.shields.io/docker/pulls/andrejreznik/python-gdal.svg)
+
 #### Python + GDAL/OGR Docker image
 
 Get and compile latest CPython 3 and GDAL 2 sources from their official repositories.
