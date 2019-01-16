@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Install runtime dependencies
 apt-get update && apt-get install -y --no-install-recommends \
@@ -25,8 +25,11 @@ tar -xvzf "Python-${PYTHON_VERSION}.tgz"
 # Install Python from source
 cd "Python-${PYTHON_VERSION}"
 ./configure \
-    --enable-optimizations \
+    --build="$gnuArch" \
+    --enable-loadable-sqlite-extensions \
     --enable-shared \
+    --with-system-expat \
+    --with-system-ffi \
     --without-ensurepip
 
 make -j"$(nproc)"

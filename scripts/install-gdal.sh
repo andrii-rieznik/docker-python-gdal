@@ -1,11 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # Install runtime dependencies
-apt-get update -y \
-    && apt-get install -y \
+apt-get update -y && apt-get install -y --no-install-recommends \
         build-essential \
-        python3-dev \
-        python3-numpy \
         libpq-dev \
         libcurl4-gnutls-dev \
         libproj-dev \
