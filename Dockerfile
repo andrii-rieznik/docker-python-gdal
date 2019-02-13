@@ -3,7 +3,8 @@
 #
 # Official Python 3.7.2 image based on slim Debian 9.6 Stretch image.
 FROM python:3.7-slim-stretch
-MAINTAINER Andrey Reznik <andrey.reznik.ce@gmail.com>
+
+LABEL maintainer="Andrey Reznik <andrey.reznik.ce@gmail.com>"
 
 ENV GDAL_VERSION=2.4.0 \
     SOURCE_DIR="/usr/local/src/python-gdal"
