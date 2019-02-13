@@ -6,7 +6,10 @@ image:
 test:
 	docker run $(IMAGE)
 
+lint:
+    docker run -v `pwd`/Dockerfile:/Dockerfile replicated/dockerfilelint /Dockerfile
+
 push-image:
 	docker push $(IMAGE)
 
-.PHONY: image test push-image
+.PHONY: image test lint push-image
