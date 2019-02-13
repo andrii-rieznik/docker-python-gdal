@@ -7,7 +7,7 @@ test:
 	docker run $(IMAGE)
 
 lint:
-    docker run -v `pwd`/Dockerfile:/Dockerfile replicated/dockerfilelint /Dockerfile
+	docker run -v `pwd`/Dockerfile:/Dockerfile replicated/dockerfilelint /Dockerfile
 
 push-image:
 	docker push $(IMAGE)
