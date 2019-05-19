@@ -7,14 +7,18 @@ Get and compile latest stable GDAL/OGR sources from official repository.
 
 #### Usage
 
-Output versions of Python, pip and GDAL
+Dockerfile provide defaults when executing a container: 
 
 ```bash
 $ docker run andrejreznik/python-gdal:stable
+```
 
+Will output Python, pip and GDAL versions:
+
+```console
 Python 3.7.3
-pip 19.0.3 from /usr/local/lib/python3.7/site-packages/pip (python 3.7)
-GDAL 2.4.1, released 2019/03/15
+pip 19.1.1 from /usr/local/lib/python3.7/site-packages/pip (python 3.7)
+GDAL 3.0.0, released 2019/05/05
 ```
 
 Run container and start an interactive bash session as root 
