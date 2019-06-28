@@ -68,10 +68,8 @@ RUN \
     && make install \
     && ldconfig \
     \
-# Install Python bindings
-    && cd "${SOURCE_DIR}/gdal-${GDAL_VERSION}/swig/python" \
-    && python3 setup.py build \
-    && python3 setup.py install \
+# Install Python bindings as standalone module via pip
+    && pip install GDAL==${GDAL_VERSION} \
     && cd /usr/local \
     \
 # Clean up
