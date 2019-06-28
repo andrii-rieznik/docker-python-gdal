@@ -38,5 +38,5 @@ $ docker run andrejreznik/python-gdal:py3.7.3-gdal3.0.0
 or build your own image with passed build args
 
 ```bash 
-$ make image GDAL_VERSION=2.3.1 PYTHON_IMAGE_TAG=3.5-jessie
+$ make image GDAL_VERSION=2.3.1 BASE_IMAGE=python:3.5-jessie
 ```
