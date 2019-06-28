@@ -1,13 +1,16 @@
 ##
 # andrejreznik/python-gdal
 #
-# Official Python 3.7.3 image based on slim Debian 9.9 Stretch image.
-FROM python:3.7.3-slim-stretch
+# Build args can be redefined in Makefile or passed as build args to Docker build command
+
+ARG BASE_IMAGE
+
+FROM ${BASE_IMAGE}
 
 LABEL maintainer="Andrey Reznik <andrey.reznik.ce@gmail.com>"
 
-ENV GDAL_VERSION=3.0.0 \
-    SOURCE_DIR="/usr/local/src/python-gdal"
+ARG GDAL_VERSION
+ARG SOURCE_DIR=/usr/local/src/python-gdal
 
 RUN \
 # Install runtime dependencies
