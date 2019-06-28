@@ -26,3 +26,17 @@ Run container and start an interactive bash session as root
 ```bash
 $ docker run -it andrejreznik/python-gdal:stable bash
 ```
+
+#### Tags and versions
+
+You can also use a specific version of Python or GDAL by appropriate tag
+
+```bash
+$ docker run andrejreznik/python-gdal:py3.7.3-gdal3.0.0
+```
+
+or build your own image with passed build args
+
+```bash 
+$ make image GDAL_VERSION=2.3.1 PYTHON_IMAGE_TAG=3.5-jessie
+```

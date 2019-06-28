@@ -1,7 +1,13 @@
-IMAGE := andrejreznik/python-gdal:stable
+GDAL_VERSION ?= 3.0.0
+PYTHON_VERSION ?= 3.7.3
+PYTHON_IMAGE_TAG ?= $(PYTHON_VERSION)-slim-stretch
+IMAGE ?= andrejreznik/python-gdal:py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
 image:
-	docker build -t $(IMAGE) .
+	docker build \
+		--build-arg GDAL_VERSION=$(GDAL_VERSION) \
+		--build-arg PYTHON_IMAGE_TAG=$(PYTHON_IMAGE_TAG) \
+		-t $(IMAGE) .
 
 test:
 	docker run $(IMAGE)

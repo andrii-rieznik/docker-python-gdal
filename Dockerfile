@@ -3,9 +3,9 @@
 #
 # Build args can be redefined in Makefile or passed as build args to Docker build command
 
-ARG BASE_IMAGE
+ARG PYTHON_IMAGE_TAG
 
-FROM ${BASE_IMAGE}
+FROM python:${PYTHON_IMAGE_TAG}
 
 LABEL maintainer="Andrey Reznik <andrey.reznik.ce@gmail.com>"
 
