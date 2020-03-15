@@ -1,6 +1,6 @@
-language: bash
-
-sudo: false
+language: shell
+os: linux
+dist: bionic
 
 services:
   - docker
