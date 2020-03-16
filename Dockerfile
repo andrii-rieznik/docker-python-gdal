@@ -3,13 +3,13 @@
 #
 # Build args can be redefined in Makefile or passed as build args to Docker build command
 
-ARG BASE_IMAGE=python:3.7.3-slim-stretch
+ARG BASE_IMAGE=python:3.8.2-slim-stretch
 
 FROM ${BASE_IMAGE}
 
 LABEL maintainer="Andrey Reznik <andrey.reznik.ce@gmail.com>"
 
-ARG GDAL_VERSION=3.0.0
+ARG GDAL_VERSION=3.0.4
 ARG SOURCE_DIR=/usr/local/src/python-gdal
 
 RUN \
