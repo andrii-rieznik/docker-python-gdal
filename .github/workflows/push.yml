@@ -1,0 +1,29 @@
+name: Build
+
+on: push
+
+jobs:
+  build:
+    name: build
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: make image
+
+      - name: Test
+        run: make test
+
+      - name: Lint
+        run: make lint
+
+      - name: Push
+        if: github.ref == 'refs/heads/master'
+        run: |
+          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u andrejreznik --password-stdin
+
+          make push-image
