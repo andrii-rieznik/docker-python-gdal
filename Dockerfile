@@ -3,7 +3,7 @@
 #
 # Build args can be redefined in Makefile or passed as build args to Docker build command
 
-ARG BASE_IMAGE=python:3.8.2-slim-buster
+ARG BASE_IMAGE=python:3.10.0-slim-buster
 
 FROM ${BASE_IMAGE}
 
