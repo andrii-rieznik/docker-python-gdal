@@ -3,7 +3,7 @@
 
 #### Python + GDAL/OGR Docker image
 
-Get and compile latest stable GDAL/OGR sources from official repository.
+Get and compile the latest stable GDAL/OGR sources from official repository.
 
 #### Usage
 
@@ -16,9 +16,9 @@ $ docker run andrejreznik/python-gdal:stable
 Will output Python, pip and GDAL versions:
 
 ```console
-Python 3.8.2
-pip 20.0.2 from /usr/local/lib/python3.8/site-packages/pip (python 3.8)
-GDAL 3.0.4, released 2020/01/28
+Python 3.10.0
+pip 21.2.4 from /usr/local/lib/python3.10/site-packages/pip (python 3.10)
+GDAL 3.2.3, released 2021/04/27
 ```
 
 Run container and start an interactive bash session as root
