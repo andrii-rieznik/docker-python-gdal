@@ -9,7 +9,7 @@ FROM ${BASE_IMAGE}
 
 LABEL maintainer="Andrey Reznik <andrey.reznik.ce@gmail.com>"
 
-ARG GDAL_VERSION=3.0.4
+ARG GDAL_VERSION=3.2.3
 ARG SOURCE_DIR=/usr/local/src/python-gdal
 
 RUN \
