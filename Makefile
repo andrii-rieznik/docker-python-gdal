@@ -1,6 +1,6 @@
-GDAL_VERSION ?= 3.0.4
-PYTHON_VERSION ?= 3.8.2
-BASE_IMAGE ?= python:$(PYTHON_VERSION)-slim-buster
+GDAL_VERSION ?= 3.2.3
+PYTHON_VERSION ?= 3.10.0
+BASE_IMAGE ?= python:$(PYTHON_VERSION)-slim-bullseye
 DOCKER_REPO ?= andrejreznik/python-gdal
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
