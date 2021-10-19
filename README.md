@@ -1,5 +1,5 @@
 # :whale: python-gdal
-![Build](https://github.com/andrejreznik/docker-python-gdal/workflows/Build/badge.svg)![Layers](https://images.microbadger.com/badges/image/andrejreznik/python-gdal.svg)![Pulls](https://img.shields.io/docker/pulls/andrejreznik/python-gdal.svg)
+![Build](https://img.shields.io/github/workflow/status/andrejreznik/docker-python-gdal/Build.svg)![Build](https://img.shields.io/docker/cloud/build/andrejreznik/python-gdal.svg)![Pulls](https://img.shields.io/docker/pulls/andrejreznik/python-gdal.svg)![Size](https://img.shields.io/docker/image-size/andrejreznik/python-gdal/latest.svg)
 
 #### Python + GDAL/OGR Docker image
 
