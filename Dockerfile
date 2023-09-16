@@ -9,6 +9,10 @@ FROM ${BASE_IMAGE}
 
 LABEL maintainer="Andrii Rieznik <andrii.rieznik@protonmail.com>"
 
+LABEL org.opencontainers.image.source=https://github.com/andriyreznik/docker-python-gdal
+LABEL org.opencontainers.image.description="Debian based image with pre-installed GDAL/OGR libraries and Python bindings"
+LABEL org.opencontainers.image.licenses=MIT
+
 ARG GDAL_VERSION=3.2.3
 ARG SOURCE_DIR=/usr/local/src/python-gdal
 
