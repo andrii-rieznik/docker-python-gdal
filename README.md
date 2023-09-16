@@ -1,6 +1,5 @@
-# :whale: python-gdal
-![Build](https://img.shields.io/github/workflow/status/andrejreznik/docker-python-gdal/Build.svg)![Build](https://img.shields.io/docker/cloud/build/andrejreznik/python-gdal.svg)![Pulls](https://img.shields.io/docker/pulls/andrejreznik/python-gdal.svg)![Size](https://img.shields.io/docker/image-size/andrejreznik/python-gdal/latest.svg)
-
+# 🐳 python-gdal
+![Build](https://img.shields.io/github/actions/workflow/status/andriyreznik/docker-python-gdal/push.yml?branch=master)![Pulls](https://img.shields.io/docker/pulls/andrejreznik/python-gdal.svg)![Size](https://img.shields.io/docker/image-size/andrejreznik/python-gdal/latest.svg)
 #### Python + GDAL/OGR Docker image
 
 Get and compile the latest stable GDAL/OGR sources from official repository.
