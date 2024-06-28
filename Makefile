@@ -1,14 +1,12 @@
-GDAL_VERSION ?= 3.2.3
-PYTHON_VERSION ?= 3.10.0
-BASE_IMAGE ?= python:$(PYTHON_VERSION)-slim-bullseye
+GDAL_VERSION ?= 3.9.1
+PYTHON_VERSION ?= 3.12.4
 DOCKER_REPO ?= andrejreznik/python-gdal
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
 image:
 	docker build \
 		--build-arg GDAL_VERSION=$(GDAL_VERSION) \
-		--build-arg BASE_IMAGE=$(BASE_IMAGE) \
-		--no-cache \
+		--build-arg PYTHON_VERSION=$(PYTHON_VERSION) \
 		-t $(IMAGE) .
 
 test:
