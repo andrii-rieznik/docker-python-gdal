@@ -5,8 +5,8 @@ LABEL org.opencontainers.image.source=https://github.com/andrii-reznik/docker-py
 LABEL org.opencontainers.image.description="Debian based image with pre-installed GDAL/OGR libraries and Python bindings"
 LABEL org.opencontainers.image.licenses=MIT
 
-ARG PYTHON_VERSION=3.12.4
-ARG GDAL_VERSION=3.9.1
+ARG PYTHON_VERSION=3.12.6
+ARG GDAL_VERSION=3.9.2
 ARG SOURCE_DIR=/usr/local/src/python-gdal
 
 ENV PYENV_ROOT="/usr/local/pyenv"
