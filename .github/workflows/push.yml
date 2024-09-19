@@ -24,6 +24,6 @@ jobs:
       - name: Push
         if: github.ref == 'refs/heads/master'
         run: |
-          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u andrejreznik --password-stdin
+          echo ${{ secrets.GH_PAT }} | docker login ghcr.io -u andrii-rieznik --password-stdin
 
           make push-image
