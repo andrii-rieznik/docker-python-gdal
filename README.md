@@ -28,13 +28,13 @@ docker run -it ghcr.io/andrii-rieznik/python-gdal /bin/bash
 To use a specific version of Python or GDAL with the appropriate tag:
 
 ```bash
-docker run ghcr.io/andrii-rieznik/python-gdal:py3.12.4-gdal3.9.1
+docker run ghcr.io/andrii-rieznik/python-gdal:py3.12.6-gdal3.9.2
 ```
 
 To pass as build arguments:
 
 ```bash
-make image PYTHON_VERSION=3.12.4 GDAL_VERSION=3.9.1
+make image PYTHON_VERSION=3.12.6 GDAL_VERSION=3.9.2
 ```
 
 ## License
