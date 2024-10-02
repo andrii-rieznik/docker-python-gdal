@@ -2,7 +2,7 @@ FROM debian:bookworm
 
 LABEL org.opencontainers.image.authors=andrii.rieznik@pm.me
 LABEL org.opencontainers.image.source=https://github.com/andrii-reznik/docker-python-gdal
-LABEL org.opencontainers.image.description="Debian based image with pre-installed GDAL/OGR libraries and Python bindings"
+LABEL org.opencontainers.image.description="Debian-based image bundled with GDAL/OGR and Python"
 LABEL org.opencontainers.image.licenses=MIT
 
 ARG PYTHON_VERSION=3.12.6
@@ -35,6 +35,7 @@ RUN \
         \
         curl \
         cmake \
+        libgeos-dev \
         libproj-dev \
         swig \
     && rm -rf /var/lib/apt/lists/* \
@@ -72,4 +73,4 @@ RUN \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf "${SOURCE_DIR}"
 
-CMD python -V && pip -V && gdalinfo --version
+CMD ["python", "-V", "&&", "pip", "-V", "&&", "gdalinfo", "--version"]
