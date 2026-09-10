@@ -1,6 +1,6 @@
-GDAL_VERSION ?= 3.9.2
-PYTHON_VERSION ?= 3.12.6
-DOCKER_REPO ?= ghcr.io/andrii-rieznik/python-gdal
+GDAL_VERSION ?= 3.6.2
+PYTHON_VERSION ?= 3.11
+DOCKER_REPO ?= vodka/python-gdal-trixie
 IMAGE ?= $(DOCKER_REPO):py$(PYTHON_VERSION)-gdal$(GDAL_VERSION)
 
 image:
