@@ -1,4 +1,4 @@
-# 🌍 python-gdal
+# 🐍🌍 python-gdal
 
 ## Python GDAL/OGR API
 
