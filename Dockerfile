@@ -1,12 +1,11 @@
-FROM debian:bookworm
+FROM debian:trixie
 
-LABEL org.opencontainers.image.authors=andrii.rieznik@pm.me
-LABEL org.opencontainers.image.source=https://github.com/andrii-reznik/docker-python-gdal
+LABEL org.opencontainers.image.source=https://github.com/endast/docker-python-gdal
 LABEL org.opencontainers.image.description="Debian-based image bundled with GDAL/OGR and Python"
 LABEL org.opencontainers.image.licenses=MIT
 
-ARG PYTHON_VERSION=3.12.6
-ARG GDAL_VERSION=3.9.2
+ARG PYTHON_VERSION=3.11
+ARG GDAL_VERSION=3.6.2
 ARG SOURCE_DIR=/usr/local/src/python-gdal
 
 ENV PYENV_ROOT="/usr/local/pyenv"
